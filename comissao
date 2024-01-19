@@ -1,0 +1,28 @@
+##15.Faça um programa para pagamento de comissão de vendedores de peças,levando-se em consideração que sua comissão será de 5% do total da venda 
+#e que você tem os seguintes dados:
+#Identificação do vendedor   
+#- Código da peça
+#- Preço unitário da peça
+#- Quantidade vendida"
+import random
+def comissao(valor):
+    if valor>=1000 and valor<=5000:
+        ganho = valor*0.05
+        print("Bom vendedor ganhou 5% de comissão R$",ganho)
+    elif valor>5000 and valor<=50000:
+        ganho = valor*0.1
+        print("Ótimo vendedor ganhou 10% de comissão R$",ganho)
+    elif valor>50000:
+        ganho = valor*0.15
+        print("Excelente vendedor ganhou 15% de comissão R$",ganho)
+    elif valor<1000:
+        print("Não recebeu nada, trabalhe mais!")
+
+
+codigo_peca= input(f'Verifique se essa é o nome número da peça: {random} \n confere?')
+nome_vendedor=input('Qual o nome do vendedor?')
+valor_peca=float(input('Qual valor da peça?'))
+qntvendida=float(input('Quantidade de peças vendidas?'))
+totalpecavend =valor_peca*qntvendida
+print(totalpecavend)
+comissao (totalpecavend) 
